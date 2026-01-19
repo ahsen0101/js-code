@@ -74,9 +74,7 @@ let someNumber = 33;//(converting number to string)
 let stringNumber = String(someNumber); //explicit conversion to string
 console.log(stringNumber);//what if someNumber = null;---> "null"
 //what if someNumber = undefined;---> "undefined"
-console.log(typeof stringNumber);//string
-
-
+console.log(typeof stringNumber);//now we check did it really change the number to string?---> yes it did👍👍👍
 
 
 
