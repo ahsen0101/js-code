@@ -76,16 +76,69 @@ console.log(stringNumber);//what if someNumber = null;---> "null"
 //what if someNumber = undefined;---> "undefined"
 console.log(typeof stringNumber);//now we check did it really change the number to string?---> yes it did👍👍👍
 
+//----------------------------------now lets see about operations
 
+let value = "33";
+let negvalue = -value; //this will convert the string to number and then make it negative
+console.log(negvalue);//-33
 
+//some arthmetic operations
+console.log(2+2);//4(number addition)
+console.log(2-2);//0(number subtraction)
+console.log(2*2);//4(number multiplication)
+console.log(2/2);//1(number division)
+console.log(2%2);//0(number modulus)
+console.log(2**3);//8(number exponentiation)
 
+//now lets see string concatenation
 
+console.log("2"+"2");//"22"(string concatenation)
+console.log("hello"+"world");//"helloworld"(string concatenation)
 
+console.log("hello"+ 2);//"hello2"(string concatenation)(number is converted to string here)
+console.log("hello"- 2);//NaN(not a number)(string cannot be converted to number here)
+console.log("33"- 2);//31(both are converted to number here and then subtraction is done)
+console.log("33"+ 2);//"332"(number is converted to string here and then concatenation is done)
 
+console.log(+"33");//33(unary plus operator)(string is converted to number here)
+console.log(typeof (+"33"));//number
+console.log(+"hello");//NaN(unary plus operator)(string cannot be converted to number here)
+console.log(typeof (+"hello"));//number(because NaN is of type number)
+console.log(typeof NaN);//number
 
+//some special case
+console.log(" " + 1 + 0);//" 10"(string concatenation)
+console.log("" - 1 + 0);//-1(because "" is converted to 0 and then subtraction and addition is done)
+console.log(true + false);//1(because true is converted to 1 and false is converted to 0 and then addition is done)
+console.log(+true);//1(because true is converted to 1)
+console.log(+false);//0(because false is converted to 0)
+console.log(false - true);//-1(because false is converted to 0 and true is converted to 1 and then subtraction is done)
+console.log(!!"hello");//true(because "hello" is a non-empty string and !! converts it to boolean)
+console.log(!!"");//false(because "" is an empty string and !! converts it to boolean)
+console.log(6 / "3");//2(because "3" is converted to 3 and then division is done)
+console.log("2" * "3");//6(because both strings are converted to numbers and then multiplication is done)
+console.log(4 + 5 + "px");//"9px"(because 4+5 is done first and then 9 is converted to string and concatenation is done)
+console.log("$" + 4 + 5);//"$45"(string concatenation)
 
+console.log("4" - 2 + 7);//9(because "4" is converted to 4 and then subtraction and addition is done)
+console.log(2 + 3 + "2");//"52"(because 2+3 is done first and then 5 is converted to string and concatenation is done)
 
+console.log("4px" - 2);//NaN(because "4px" cannot be converted to number)
+console.log(7 / 0);//Infinity
+console.log(" -9 " + 5);//" -9 5"(string concatenation)
+console.log(" -9 " - 5);//-14(because " -9 " is converted to -9 and then subtraction is done)
+console.log(null + 1);//1(because null is converted to 0 and then addition is done)
+console.log(undefined + 1);//NaN(because undefined cannot be converted to number)
+console.log(" \t \n" - 2);//-2(because " \t \n" is converted to 0 and then subtraction is done)
+console.log(" \t \n" + 2);//" 	\n2"(string concatenation)
 
+letnum1,num2,num3;
+num1=num2=num3=2+2;
+console.log(num1,num2,num3);//4 4 4
+
+let gamecounter=100;
+gamecounter++;//++gamecounter;(prefix and postfix both work the same here)
+console.log(gamecounter);//101
 
 
 
