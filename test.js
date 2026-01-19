@@ -76,7 +76,7 @@ console.log(stringNumber);//what if someNumber = null;---> "null"
 //what if someNumber = undefined;---> "undefined"
 console.log(typeof stringNumber);//now we check did it really change the number to string?---> yes it did👍👍👍
 
-//----------------------------------now lets see about operations
+//---------------------------------- operations------------------
 
 let value = "33";
 let negvalue = -value; //this will convert the string to number and then make it negative
@@ -132,7 +132,7 @@ console.log(undefined + 1);//NaN(because undefined cannot be converted to number
 console.log(" \t \n" - 2);//-2(because " \t \n" is converted to 0 and then subtraction is done)
 console.log(" \t \n" + 2);//" 	\n2"(string concatenation)
 
-letnum1,num2,num3;
+let num1,num2,num3;
 num1=num2=num3=2+2;
 console.log(num1,num2,num3);//4 4 4
 
@@ -179,9 +179,70 @@ console.log(" \t \n "==0);//true(because " \t \n " is converted to 0 and then co
 console.log(" \t \n "===0);//false(because type is different)   
 
 
+//---------------Prmirtive/non-primitive(reference) datatypes------------------
+
+//Premitive datatypes
+// --> number,string,boolean,null,undefined,symbol(for making any value unique),bigint(when we have big values like scientific values)
+
+//Non-premitive datatypes
+// --> object,array,function
+// if you master js objects and browser web events you become javascript master
 
 
+//is js dynamic or static typed language?
+//js is dynamic typed language because we can change the datatype of a variable at any time
+let dynamicVar = 10; //number
+console.log(typeof dynamicVar);//number
+dynamicVar = "hello"; //string
+console.log(typeof dynamicVar);//string
 
+const id= Symbol('123');//unique identifier
+const anotherid = Symbol('123');//unique identifier
+console.log(id===anotherid);//false(because both are unique)
+
+const bigIntNumber = 1234567890123456789012345678901234567890n; //bigint
+console.log(typeof bigIntNumber);//bigint
+
+//objects and arrays
+const heros = ["superman","batman","wonderwoman"]; //array
+const myObj = { //object
+    name: "John",
+    age: 30,
+    isStudent: false
+};
+
+//function
+
+const myfunction = function() {//function inside a variable
+    console.log("This is my hello world");
+}
+
+function greet() {//without variable
+    console.log("Hello, World!");
+}
+
+greet();
+myfunction();
+
+//return of typeof function is object function
+console.log(typeof myfunction); //function
+//return of typeof null is object
+console.log(typeof null); //object  
+
+/**
+ * | Type of Operand  | Result of typeof           | Description / Example                                          |
+ * |------------------|----------------------------|----------------------------------------------------------------|
+ * | Undefined        | "undefined"                | A variable that has been declared but not assigned a value.    |
+ * | Null             | "object"                   | Historically a bug in JS (represented as a null pointer).      |
+ * | Boolean          | "boolean"                  | Operands like true or false.                                   |
+ * | Number           | "number"                   | Includes integers, floats, Infinity, and NaN (Not-a-Number).   |
+ * | BigInt           | "bigint"                   | Large integers created with an n suffix (e.g., 100n).          |
+ * | String           | "string"                   | Textual data like "Hello World".                               |
+ * | Symbol           | "symbol"                   | Unique and immutable primitive values.                         |
+ * | Function         | "function"                 | User-defined or predefined functions and classes.              |
+ * | Host Object      | Implementation-dependent   | Objects provided by the environment (like window or document). |
+ * | Other Objects    | "object"                   | Includes arrays [], objects {}, and dates.                     |
+ */
 
 
 
