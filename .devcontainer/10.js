@@ -61,13 +61,77 @@ const repoCount = 50;
 
 
 
+//-----------------------------Numbers and math-----------------------------//
+
+const score = 100;
+console.log(score);
+
+const balance = new Number(5000);// when you only want it as a only number explicitly
+console.log(balance);//[Number: 500] //it explicity tells that its a number object
+
+console.log(balance.toString());//5000 // converts number to string
+console.log(balance.toString().length);//4 // length of number when converted to string
+console.log(balance.toFixed(2));//5000.00 // formats number to specified decimal places
+console.log(balance.toPrecision(4));//5000 // formats number to specified length
+console.log(balance.toLocaleString());//5,000 // returns number in local string format
+console.log(balance.valueOf());//5000 // returns primitive value of number object
+console.log(balance.isInteger(balance));//true // checks if the number is integer
+console.log(balance.isNaN(NaN));//true // checks if the value is NaN
+console.log(balance.parseFloat('100.50'));//100.5 // parses string to float
+console.log(balance.parseInt('100abc'));//100 // parses string to integer
+console.log(balance.MAX_VALUE);//1.7976931348623157e+308 // maximum representable number
+console.log(balance.MIN_VALUE);//5e-324 // minimum representable number
+console.log(balance.POSITIVE_INFINITY);//Infinity // represents positive infinity
+console.log(balance.NEGATIVE_INFINITY);//-Infinity // represents negative infinity
+console.log(balance.EPSILON);//2.220446049250313e-16 // smallest difference between two representable numbers
+console.log(balance.isSafeInteger(9007199254740991));//true // checks if the number is a safe integer
+
+
+// Math object  
+console.log(Math.PI);//3.141592653589793 // returns value of PI
+console.log(Math.abs(-5));//5 // returns absolute value //only - values become positive
+console.log(Math.round(4.5));//5 // rounds number to nearest integer
+console.log(Math.ceil(4.2));//5 // rounds number up to nearest integer
+console.log(Math.floor(4.8));//4 // rounds number down to nearest integer
+
+console.log(Math.random());// returns random number between 0 and 1 hamesha
+console.log(Math.random()*100);// returns random number between 0 and 100 
+console.log(Math.random()*100 + 1);// returns random number between 1 and 100 //1 sy to oopr chahiay hi chahiay
+
+
+const min = 10;
+const max = 50; 
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);// returns random integer between min and max (inclusive) //+1 is added to avoid 0 case.
+
+//some extra methods of math object
+console.log(Math.E);//2.718281828459045 // returns value of Euler's number  
+console.log(Math.sqrt(16));//4 // returns square root of number
+console.log(Math.pow(2,3));//8 // returns base to the exponent power
+console.log(Math.abs(-10));//10 // returns absolute value
+console.log(Math.max(10,20,5,15));//20 // returns maximum value
+console.log(Math.min(10,20,5,15));//5 // returns minimum value
+console.log(Math.trunc(4.9));//4 // removes decimal part and returns integer
+console.log(Math.sign(-10));//-1 // returns sign of number
+console.log(Math.log(10));//2.302585092994046 // returns natural logarithm of number
+console.log(Math.log10(100));//2 // returns base 10 logarithm of number
+console.log(Math.cbrt(27));//3 // returns cube root of number
+console.log(Math.sinh(0));//0 // returns hyperbolic sine of number
+console.log(Math.cosh(0));//1 // returns hyperbolic cosine of number
+console.log(Math.tanh(0));//0 // returns hyperbolic tangent of number   
+console.log(Math.asin(1));//1.5707963267948966 // returns arcsine of number
+console.log(Math.acos(1));//0 // returns arccosine of number
+console.log(Math.atan(1));//0.7853981633974483 // returns arctangent of number
+console.log(Math.atan2(1,1));//0.7853981633974483 // returns arctangent of quotient of its arguments
+console.log(Math.expm1(1));//1.718281828459045 // returns e^x - 1
+console.log(Math.fround(1.5));//1.5 // returns nearest 32-bit single precision float representation of number
+console.log(Math.imul(2,3));//6 // returns result of 32-bit integer multiplication
+console.log(Math.clz32(1));//31 // returns number of leading zero bits in 32-bit integer representation
+//--------------------------------------------------//---------------------------//
 
 
 
 
-
-
-
+//---------------------Dates in JS---------------------//
 
 
 
