@@ -132,6 +132,115 @@ console.log(Math.clz32(1));//31 // returns number of leading zero bits in 32-bit
 
 
 //---------------------Dates in JS---------------------//
+//date is a global object
+const date = new Date();
+console.log(date);//current date and time   
+console.log(date.toString());// converts date to string
+console.log(date.toDateString());// converts date to readable string
+console.log(date.toISOString());// converts date to ISO string
+console.log(date.toLocaleDateString());// converts date to local date string
+console.log(date.toLocaleTimeString());// converts date to local time string
+
+
+let mycreatedate = new Date(2026, 0, 20); // year, month (0-11), day //you can also add hours, minutes, seconds, milliseconds // also DDD-MM-YYYY format is also accepted and many more formats
+console.log(mycreatedate.toDateString());//Mon Jan 20 2026 ...
+
+
+//extras
+console.log(date.getFullYear());// gets full year
+console.log(date.getMonth());// gets month (0-11)
+console.log(date.getDate());// gets day of month (1-31)
+console.log(date.getDay());// gets day of week (0-6)
+console.log(date.getHours());// gets hours (0-23)
+console.log(date.getMinutes());// gets minutes (0-59)
+console.log(date.getSeconds());// gets seconds (0-59)
+console.log(date.getMilliseconds());// gets milliseconds (0-999)
+console.log(date.getTime());// gets time in milliseconds since Jan 1, 1970
+console.log(date.setFullYear(2022));// sets full year
+console.log(date.setMonth(11));// sets month (0-11)
+console.log(date.setDate(25));// sets day of month (1-31)
+console.log(date.setHours(10));// sets hours (0-23)
+console.log(date.setMinutes(30));// sets minutes (0-59)
+console.log(date.setSeconds(45));// sets seconds (0-59)
+console.log(date.setMilliseconds(500));// sets milliseconds (0-999)
+console.log(Date.now());// gets current time in milliseconds since Jan 1, 1970
+//--------------------------------------------------//---------------------------//
+
+
+
+//---------------------------------------array in JS---------------------//
+
+const fruits = ['apple', 'banana', 'cherry'];
+
+console.log(fruits);//['apple', 'banana', 'cherry'] 
+console.log(fruits.length);//3
+console.log(fruits[0]);//apple
+console.log(fruits.__proto__);// shows all the methods of array
+
+
+const moreFruits = new Array('mango', 'papaya', 'pineapple'); // another way to declare array
+const extrafruits = ['kiwi', 'grape'];
+
+fruits.push(extrafruits); //[apple, banana, cherry, ['kiwi', 'grape']] // adds extrafruits array as a single element to fruits array
+console.log(fruits[3][0]);//kiwi // accessing kiwi from nested array
+
+const allFruits = [...fruits, ...extrafruits]; // spread operator to merge two arrays
+console.log(allFruits);//['apple', 'banana', 'cherry', 'kiwi', 'grape']
+
+
+//Spread: const newArr = [1, ...oldArr, 5, 6]; (Easy to add items in the middle/start).
+//Concat: const newArr = oldArr.concat([5, 6]); (Items are usually just appended to the end).
+
+
+//when you have an array in a array in array and you want to convert it into a single array you use flat method.
+const nestedArray = [1, 2, [3, 4, [5, 6]]];
+const flatArray = nestedArray.flat(2);// flattens the array to specified depth
+console.log(flatArray);//[1, 2, 3, 4, 5, 6] // depth 2 means it will flatten 2 levels of nested arrays(you can also use Infinity to flatten all levels)
+
+//check if its an array and then change it to an array if not
+console.log(Array.isArray(fruits));//true // checks if variable is an array
+console.log(Array.from('hello'));//['h', 'e', 'l', 'l', 'o'] // converts iterable or array-like object to array 
+console.log(Array.of(1, 2, 3));//[1, 2, 3] // creates a new array from the given arguments  
+
+
+//array methods
+console.log(fruits.push('orange'));// adds element to end of array
+console.log(fruits.pop());// removes element from end of array
+console.log(fruits.shift());// removes element from beginning of array
+console.log(fruits.unshift('grape'));// adds element to beginning of array
+console.log(fruits.includes('banana'));// checks if array includes element
+console.log(fruits.indexOf('cherry'));//2 // returns index of element
+console.log(fruits.reverse());// reverses array
+console.log(fruits.sort());// sorts array
+console.log(fruits.join(', '));// joins array elements into string
+console.log(fruits.slice(1,3));//['banana', 'cherry'] // returns a portion of the array
+console.log(fruits.splice(1,1,'kiwi'));// removes elements from array and adds new elements
+
+console.log(fruits.concat(['mango', 'papaya']));// merges two arrays
+console.log(fruits.fill('melon',1,3));// fills array with static value from start to end index
+
+//extras
+console.log(fruits.every(fruit => fruit.length > 3));// checks if all elements pass the test
+console.log(fruits.some(fruit => fruit.startsWith('a')));// checks if any element passes the test
+console.log(fruits.map(fruit => fruit.toUpperCase()));// creates a new array with the results of calling a function on every element
+console.log(fruits.filter(fruit => fruit.includes('e')));// creates a new array with all elements that pass the test
+console.log(fruits.reduce((acc, fruit) => acc + ', ' + fruit));// reduces array to a single value by executing a reducer function on each element
+console.log(fruits.find(fruit => fruit.startsWith('c')));// returns the first element that passes the test
+console.log(fruits.findIndex(fruit => fruit.startsWith('b')));// returns the index of the first element that passes the test
+console.log(fruits.flatMap(fruit => fruit.split('')));// maps each element using a mapping function and flattens the result into a new array
+//--------------------------------------------------//---------------------------//
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -140,43 +140,43 @@ let gamecounter=100;
 gamecounter++;//++gamecounter;(prefix and postfix both work the same here)
 console.log(gamecounter);//101
 
-//---------------------------comparisons-------------------------
-console.log(2==2);//true(value based comparison)
-console.log(2==="2");//false(value and type based comparison)
-console.log(2!="2");//false(value based comparison)
-console.log(2!=="2");//true(value and type based comparison)
-console.log(2>"3");//false
-console.log(3>="3");//true
-console.log(3<"4");//true
-console.log(4<="4");//true
-console.log(2<"3");//true
-console.log(3<="3");//true
-console.log("apple"<"banana");//true(because "a" comes before "b" in alphabet)
-console.log("2"<"12");//false(because in string comparison "2" is greater than "1"
-console.log("2"<2);//false(because "2" is converted to 2 and then comparison is done)
-console.log(null==0);//false(because null is only equal to undefined)
-console.log(null===0);//false(because type is different)
+    //---------------------------comparisons-------------------------
+    console.log(2==2);//true(value based comparison)
+    console.log(2==="2");//false(value and type based comparison)
+    console.log(2!="2");//false(value based comparison)
+    console.log(2!=="2");//true(value and type based comparison)
+    console.log(2>"3");//false
+    console.log(3>="3");//true
+    console.log(3<"4");//true
+    console.log(4<="4");//true
+    console.log(2<"3");//true
+    console.log(3<="3");//true
+    console.log("apple"<"banana");//true(because "a" comes before "b" in alphabet)
+    console.log("2"<"12");//false(because in string comparison "2" is greater than "1"
+    console.log("2"<2);//false(because "2" is converted to 2 and then comparison is done)
+    console.log(null==0);//false(because null is only equal to undefined)
+    console.log(null===0);//false(because type is different)
 
-// == and <> act differently with null and undefined as <> converts null to 0.
-console.log(null<=0);//true(because null is converted to 0 and then comparison is done)
-console.log(null>=0);//true(because null is converted to 0 and then comparison is done)
-console.log(undefined==null);//true(because undefined is only equal to null)
-console.log(undefined<=null);//false(because undefined is converted to NaN and then comparison is done)
-console.log(undefined<null);//false(because undefined is converted to NaN and then comparison is done)
-console.log(undefined>null);//false(because undefined is converted to NaN and then comparison is done) 
-console.log(undefined>=null);//false(because undefined is converted to NaN and then comparison is done)
-console.log(undefined==0);//false(because undefined cannot be converted to number)
-console.log(NaN==NaN);//false(because NaN is not equal to anything including itself)
-console.log(Object.is(NaN, NaN));//true(because Object.is checks for same value including NaN)
-console.log(NaN===NaN);//false(because NaN is not equal to anything including itself)
-console.log(0===-0);//true(because both are same in type and value)
-console.log(Object.is(0, -0));//false(because Object.is checks for same value including -0 and 0)
-console.log(0==false);//true(because false is converted to 0 and then comparison is done)
-console.log(0===false);//false(because type is different)
-console.log(""==false);//true(because "" is converted to 0 and false is converted to 0 and then comparison is done)
-console.log(""===false);//false(because type is different)  
-console.log(" \t \n "==0);//true(because " \t \n " is converted to 0 and then comparison is done)
-console.log(" \t \n "===0);//false(because type is different)   
+    // == and <> act differently with null and undefined as <> converts null to 0.
+    console.log(null<=0);//true(because null is converted to 0 and then comparison is done)
+    console.log(null>=0);//true(because null is converted to 0 and then comparison is done)
+    console.log(undefined==null);//true(because undefined is only equal to null)
+    console.log(undefined<=null);//false(because undefined is converted to NaN and then comparison is done)
+    console.log(undefined<null);//false(because undefined is converted to NaN and then comparison is done)
+    console.log(undefined>null);//false(because undefined is converted to NaN and then comparison is done) 
+    console.log(undefined>=null);//false(because undefined is converted to NaN and then comparison is done)
+    console.log(undefined==0);//false(because undefined cannot be converted to number)
+    console.log(NaN==NaN);//false(because NaN is not equal to anything including itself)
+    console.log(Object.is(NaN, NaN));//true(because Object.is checks for same value including NaN)
+    console.log(NaN===NaN);//false(because NaN is not equal to anything including itself)
+    console.log(0===-0);//true(because both are same in type and value)
+    console.log(Object.is(0, -0));//false(because Object.is checks for same value including -0 and 0)
+    console.log(0==false);//true(because false is converted to 0 and then comparison is done)
+    console.log(0===false);//false(because type is different)
+    console.log(""==false);//true(because "" is converted to 0 and false is converted to 0 and then comparison is done)
+    console.log(""===false);//false(because type is different)  
+    console.log(" \t \n "==0);//true(because " \t \n " is converted to 0 and then comparison is done)
+    console.log(" \t \n "===0);//false(because type is different)   
 
 
 //---------------Prmirtive/non-primitive(reference) datatypes------------------
@@ -243,6 +243,34 @@ console.log(typeof null); //object
  * | Host Object      | Implementation-dependent   | Objects provided by the environment (like window or document). |
  * | Other Objects    | "object"                   | Includes arrays [], objects {}, and dates.                     |
  */
+
+
+//------------------------------steack and heap memory--------------------
+//stack memory--> small size memory, stores primitive datatypes, faster access
+//heap memory--> large size memory, stores non-primitive datatypes, slower access
+//when we create a variable of primitive datatype it is stored in stack memory
+//when we create a variable of non-primitive datatype it is stored in heap memory and a reference is stored in stack memory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
